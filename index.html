@@ -3,36 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>GSAP Circle Animation</title>
-  <!-- Font Awesome CDN for icons -->
+
+  <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- Custom CSS -->
+
+  <!-- Custom CSS File -->
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-<!-- PAGE 1: Hero Section with Floating Circles and SVG -->
+<!-- ================= PAGE 1 : HERO SECTION ================= -->
 <div id="page1">
 
-  <!-- Floating background circles -->
+  <!-- Background floating decorative boxes -->
   <div id="box1"></div>
   <div id="box2"></div>
   <div id="box3"></div>
-  <div id="box4"></div>
-  <div id="box5"></div>
+  <div id="box4-p1"></div>
+  <div id="box5-p1"></div>
 
-  <!-- Left content: heading, paragraph, and email form -->
+  <!-- Left side content -->
   <div id="leftContent">
     <h1>Grow Your Startup with Ease</h1>
     <p>
-      Launch your product with our intuitive landing page template, fully responsive and ready to impress your visitors.
+      Launch your product with our intuitive landing page template,
+      fully responsive and ready to impress your visitors.
     </p>
-    <div class="formBox">
-      <input type="email" placeholder="Enter your email…" />
-      <button>Get Early Access</button>
-    </div>
+
+    <!-- Email form (wrapped in form to avoid Chrome warning) -->
+    <form class="formBox" action="#" method="post">
+      <input type="email" required placeholder="Enter your email…" />
+      <button type="submit">Get Early Access</button>
+    </form>
   </div>
 
-  <!-- Right SVG circle -->
+  <!-- SVG Circle Animation -->
   <svg width="800" height="800" viewBox="0 0 200 200">
     <circle
       id="myCircle"
@@ -45,13 +50,13 @@
     />
   </svg>
 
-  <!-- Images inside the circle area -->
+  <!-- Images inside circle area -->
   <div class="imgWrapper">
     <img src="./images/graph.jpg" class="img img1" alt="Graph illustration" />
     <img src="./images/graph2.jpg" class="img img2" alt="Graph illustration 2" />
   </div>
 
-  <!-- Small floating circles with icons -->
+  <!-- Small floating icon circles -->
   <div class="smallcircles">
     <div class="icon-circle" id="iconA"><i class="fa-solid fa-leaf"></i></div>
     <div class="icon-circle" id="iconB"><i class="fa-solid fa-bolt"></i></div>
@@ -61,93 +66,98 @@
 
 </div>
 
-<!-- PAGE 2: Meet April Section -->
+<!-- ================= PAGE 2 : ABOUT / MEET APRIL ================= -->
 <div id="page2">
   <h1>Meet April</h1>
   <p>
-    April is a creative thinker who loves technology, nature, and connecting with people.
+    April is a creative thinker who loves technology, nature,
+    and connecting with people.
   </p>
 
-  <!-- Feature cards about April -->
+  <!-- Info cards -->
   <div class="cards">
+
     <div class="card up">
       <div class="icon-circle" id="icon1"><i class="fa-solid fa-leaf"></i></div>
       <h3>Nature Enthusiast</h3>
-      <p>She enjoys spending time outdoors and exploring the beauty of nature.</p>
+      <p>She enjoys spending time outdoors and exploring nature.</p>
     </div>
 
     <div class="card down">
       <div class="icon-circle" id="icon2"><i class="fa-solid fa-computer"></i></div>
       <h3>Tech Lover</h3>
-      <p>Passionate about technology, she loves experimenting with new gadgets.</p>
+      <p>She loves experimenting with new technology.</p>
     </div>
 
     <div class="card up">
       <div class="icon-circle" id="icon3"><i class="fa fa-user"></i></div>
       <h3>People Connector</h3>
-      <p>Thrives in social settings and enjoys creating meaningful connections.</p>
+      <p>Enjoys creating meaningful connections.</p>
     </div>
 
     <div class="card down">
       <div class="icon-circle" id="icon4"><i class="fa fa-bell"></i></div>
       <h3>Always Alert</h3>
-      <p>Stays informed and keeps an eye out for new opportunities and ideas.</p>
+      <p>Stays updated with new opportunities.</p>
     </div>
+
   </div>
 </div>
 
-<!-- PAGE 3: Testimonials Section -->
+<!-- ================= PAGE 3 : TESTIMONIALS ================= -->
 <div id="page3">
   <h1>What Our Clients Say</h1>
 
-  <!-- Background circle decoration -->
+  <!-- Decorative elements -->
   <div class="bg-circle"></div>
-  <div id="box4"></div>
-  <div id="box5"></div>
+  <div id="box4-p3"></div>
+  <div id="box5-p3"></div>
 
-  <!-- Client testimonial cards -->
+  <!-- Testimonial cards -->
   <div class="card top-left">
     <div class="card-image"><img src="./images/boy-imga.jpg" alt="John Doe"></div>
     <h3>John Doe</h3>
-    <p>"Excellent service! My business saw amazing growth in no time."</p>
+    <p>"Excellent service! My business grew fast."</p>
     <a href="#">Read More</a>
   </div>
 
   <div class="card top-right">
     <div class="card-image"><img src="./images/girl.jpeg" alt="Jane Smith"></div>
     <h3>Jane Smith</h3>
-    <p>"Working with them was a game-changer for our startup."</p>
+    <p>"A game-changer for our startup."</p>
     <a href="#">Read More</a>
   </div>
 
   <div class="card bottom">
     <div class="card-image"><img src="./images/boy-img.jpeg" alt="Mike Johnson"></div>
     <h3>Mike Johnson</h3>
-    <p>"Their support and expertise helped our business grow tremendously."</p>
+    <p>"Amazing support and expertise."</p>
     <a href="#">Read More</a>
   </div>
 
-  <!-- Mini boxes for decoration -->
+  <!-- Extra decorative boxes -->
   <div id="boxmini"></div>
   <div id="boxmini2"></div>
 </div>
 
-<!-- PAGE 4: Footer Section -->
+<!-- ================= PAGE 4 : FOOTER ================= -->
 <div id="page4">
   <footer class="footer">
     <div class="footer-content">
+
       <h2>Stay Connected</h2>
-      <p>
-        Subscribe to get the latest updates and insights straight to your inbox.
-      </p>
+      <p>Subscribe to get the latest updates.</p>
 
-      <!-- Email subscription form and social links -->
+      <!-- Footer form + social icons -->
       <div class="form-social">
-        <div class="formBox">
-          <input type="email" placeholder="Enter your email…" />
-          <button>Subscribe</button>
-        </div>
 
+        <!-- Email subscription form -->
+        <form class="formBox" action="#" method="post">
+          <input type="email" required placeholder="Enter your email…" />
+          <button type="submit">Subscribe</button>
+        </form>
+
+        <!-- Social media icons -->
         <div class="socialIcons">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
@@ -166,13 +176,17 @@
       <div class="footer-bottom">
         © 2026 April, all rights reserved
       </div>
+
     </div>
   </footer>
 </div>
 
-<!-- GSAP Scripts for animations -->
+<!-- ================= GSAP SCRIPTS ================= -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+<!-- Custom JS -->
 <script src="./index.js"></script>
+
 </body>
 </html>
